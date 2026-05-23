@@ -1,10 +1,6 @@
 pipeline {
   agent any
 
-  triggers {
-    githubPush()
-  }
-
   environment {
     IMAGE = "devops-site:"
   }
@@ -14,7 +10,7 @@ pipeline {
     stage('Checkout') {
       steps {
         git branch: 'main',
-            url: 'https://github.com/Devopsplan/devops-site-end-to-end.git'
+            url: 'https://github.com/neeraj030308/site.git'
       }
     }
 
